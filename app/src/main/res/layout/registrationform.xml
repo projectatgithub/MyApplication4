@@ -1,91 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000">
+    android:background="#000"
+    android:orientation="vertical">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="FORM"
         android:textColor="#FF85CCC9"
-        android:textSize="30dp"
-        android:layout_gravity="center"/>
+        android:textSize="30dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
 
-<android.support.design.widget.TextInputLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        android:id="@+id/ed3" />
-
-
-</android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/ed3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:inputType="textPersonName" />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/ed4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Roll No."
-                android:inputType="number"
-                android:id="@+id/ed4"/>
+                android:inputType="number" />
 
         </android.support.design.widget.TextInputLayout>
 
 
-
-<android.support.v7.widget.AppCompatSpinner
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/sp1">
-
-</android.support.v7.widget.AppCompatSpinner>
         <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/sp1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/sp2">
-        </android.support.v7.widget.AppCompatSpinner>
-<android.support.design.widget.TextInputLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email-ID"
+            android:layout_height="wrap_content">
 
-       android:id="@+id/ed5" />
-</android.support.design.widget.TextInputLayout>
+        </android.support.v7.widget.AppCompatSpinner>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/sp2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.AppCompatSpinner>
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <EditText
+                android:id="@+id/ed5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Phone Number"
-                android:id="@+id/ed6"/>
+
+                android:hint="Email-ID" />
         </android.support.design.widget.TextInputLayout>
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/ed6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/ed7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="password"
-                android:inputType="textPassword"
-                android:id="@+id/ed7"/>
+                android:inputType="textPassword" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -94,25 +100,26 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/ed8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint=" confirm password"
-                android:id="@+id/ed8"/>
+                android:hint=" confirm password" />
 
         </android.support.design.widget.TextInputLayout>
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/b1"
                 style="@style/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:text="SUBMIT"
                 android:background="@drawable/ripple"
 
-                android:id="@+id/b1"/>
+                android:text="SUBMIT" />
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>
 
