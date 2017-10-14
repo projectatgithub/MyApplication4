@@ -32,6 +32,13 @@ public class Registrationform extends AppCompatActivity {
         b1 = (MaterialRippleLayout) findViewById(R.id.submitripple);
         s1 = (Spinner) findViewById(R.id.sp1);
         s2 = (Spinner) findViewById(R.id.sp2);
+        if (s1.getSelectedItem()=="BBA")
+        {
+            s2.setEnabled(false);
+            s2.setClickable(false);
+            s2.setDropDownVerticalOffset(20);
+            s2.setVisibility(View.GONE);
+        }
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,6 +91,7 @@ public class Registrationform extends AppCompatActivity {
             valid = Boolean.parseBoolean("false");
         }
 
+
         return valid;
     }
 
@@ -95,5 +103,17 @@ public class Registrationform extends AppCompatActivity {
         password = e4.getText().toString().trim();
         cpassword = e5.getText().toString().trim();
 
+    }
+
+    @Override
+    protected void onStart() {
+        if (s1.getSelectedItem()=="BBA")
+        {
+            s2.setEnabled(false);
+            s2.setClickable(false);
+            s2.setDropDownVerticalOffset(20);
+            s2.setVisibility(View.GONE);
+        }
+        super.onStart();
     }
 }
