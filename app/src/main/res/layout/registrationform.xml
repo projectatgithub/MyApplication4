@@ -52,22 +52,33 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
-        <android.support.v7.widget.AppCompatSpinner
-            android:id="@+id/sp1"
+            android:layout_height="14dp" />
+        <LinearLayout
+            android:padding="5dp"
+            android:weightSum="2"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:entries="@array/dept">
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/sp1"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/dept">
 
-        </android.support.v7.widget.AppCompatSpinner>
+            </android.support.v7.widget.AppCompatSpinner>
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/sp2"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/branch"/>
+        </LinearLayout>
+
 <Space
     android:layout_width="match_parent"
     android:layout_height="10dp" />
-        <android.support.v7.widget.AppCompatSpinner
-            android:id="@+id/sp2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:entries="@array/branch"/>
+
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -127,7 +138,7 @@
             android:id="@+id/submitripple"
             app:mrl_rippleOverlay="true"
             app:mrl_rippleColor="#ffffff"
-            app:mrl_rippleDuration="1350"
+            app:mrl_rippleDuration="350"
             app:mrl_rippleHover="true"
             app:mrl_rippleDimension="10dp"
             app:mrl_rippleAlpha="0.1"

@@ -1,6 +1,7 @@
 package com.example.myapplication4;
 
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -19,12 +20,13 @@ public class Registrationform extends AppCompatActivity {
     private String name, email, phone, password, cpassword;
     private MaterialRippleLayout b1;
     private Spinner s1, s2;
-
+    private Vibrator vibrator;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registrationform);
+        vibrator=(Vibrator)getSystemService(VIBRATOR_SERVICE);
         e1 = (EditText) findViewById(R.id.ed3);
         e2 = (EditText) findViewById(R.id.ed4);
         e3 = (EditText) findViewById(R.id.ed5);
@@ -113,6 +115,11 @@ public class Registrationform extends AppCompatActivity {
         if (s1.getSelectedItem().equals("DEPARTMENT")) {
             Toast.makeText(this, "please select Department", Toast.LENGTH_SHORT).show();
             valid = Boolean.parseBoolean("false");
+        }
+        if (s1.getSelectedItem().equals("B TECH")&& s2.getSelectedItem().equals("BRANCH")){
+            Toast.makeText(this, "please select Branch", Toast.LENGTH_SHORT).show();
+            valid = Boolean.parseBoolean("false");
+            vibrator.vibrate(300);
         }
 
 
