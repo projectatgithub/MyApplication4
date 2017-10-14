@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string-array name="dept">
+        <item>DEPARTMENT</item>
+        <item>BBA</item>
+        <item>B TECH</item>
+    </string-array>
+    <string-array name="branch">
+        <item>BRANCH</item>
+        <item>CSE </item>
+        <item>CE</item>
+        <item>ME</item>
+        <item>ECE and EE</item>
+    </string-array>
 </resources>
