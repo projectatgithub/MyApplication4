@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Patterns;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -32,13 +34,31 @@ public class Registrationform extends AppCompatActivity {
         b1 = (MaterialRippleLayout) findViewById(R.id.submitripple);
         s1 = (Spinner) findViewById(R.id.sp1);
         s2 = (Spinner) findViewById(R.id.sp2);
-        if (s1.getSelectedItem()=="BBA")
-        {
-            s2.setEnabled(false);
-            s2.setClickable(false);
-            s2.setDropDownVerticalOffset(20);
-            s2.setVisibility(View.GONE);
-        }
+        s1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if ((i==1)||i==0)
+                {
+
+                    s2.setEnabled(false);
+                    s2.setClickable(false);
+                    s2.setDropDownVerticalOffset(20);
+                    s2.setVisibility(View.GONE);
+                }
+                else {
+                    s2.setEnabled(true);
+                    s2.setClickable(true);
+                    s2.setDropDownVerticalOffset(20);
+                    s2.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,7 +74,7 @@ public class Registrationform extends AppCompatActivity {
         initialize();
 
         if (!validate()) {
-            Toast.makeText(this, "Signup has Failed", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(this, "Signup has Failed", Toast.LENGTH_SHORT).show();
         } else {
             onSignupSuccess();
         }
@@ -72,7 +92,7 @@ public class Registrationform extends AppCompatActivity {
             e1.setError("Please Enter valid name");
             valid = Boolean.parseBoolean("false");
         }
-        if (TextUtils.isEmpty(email) || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+        if (TextUtils.isEmpty(email) /*|| !Patterns.EMAIL_ADDRESS.matcher(email).matches()*/) {
 
 
             e3.setError("Please Enter valid Email Address");
@@ -90,6 +110,10 @@ public class Registrationform extends AppCompatActivity {
             e4.setError("Please Enter phone number");
             valid = Boolean.parseBoolean("false");
         }
+        if (s1.getSelectedItem().equals("DEPARTMENT")) {
+            Toast.makeText(this, "please select Department", Toast.LENGTH_SHORT).show();
+            valid = Boolean.parseBoolean("false");
+        }
 
 
         return valid;
@@ -105,15 +129,5 @@ public class Registrationform extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onStart() {
-        if (s1.getSelectedItem()=="BBA")
-        {
-            s2.setEnabled(false);
-            s2.setClickable(false);
-            s2.setDropDownVerticalOffset(20);
-            s2.setVisibility(View.GONE);
-        }
-        super.onStart();
-    }
+
 }
