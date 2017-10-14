@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#000"
+    android:padding="16dp"
     android:orientation="vertical">
 
     <TextView
@@ -107,7 +109,15 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/submitripple"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleColor="#ffffff"
+            app:mrl_rippleDuration="1350"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleDimension="10dp"
+            app:mrl_rippleAlpha="0.1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -120,7 +130,7 @@
                 android:background="@drawable/ripple"
 
                 android:text="SUBMIT" />
-        </android.support.design.widget.TextInputLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
     </LinearLayout>
 
 </LinearLayout>
