@@ -13,9 +13,7 @@ import android.widget.Toast;
 import com.balysv.materialripple.MaterialRippleLayout;
 
 
-/**
- * Created by Deepak on 10/13/2017.
- */
+
 
 public class Registrationform extends AppCompatActivity {
   private   EditText e1,e2,e3,e4,e5,e6;
@@ -41,11 +39,11 @@ public class Registrationform extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 register();
-                Toast.makeText(Registrationform.this,"inside",Toast.LENGTH_LONG).show();
+
             }
         });
 
-       
+
     }
     public void register() {
         initialize();
