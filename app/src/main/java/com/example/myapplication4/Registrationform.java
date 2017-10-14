@@ -45,13 +45,7 @@ public class Registrationform extends AppCompatActivity {
             }
         });
 
-        /*b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });*/
-
+       
     }
     public void register() {
         initialize();
