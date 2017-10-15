@@ -4,14 +4,11 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.util.Patterns;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import com.balysv.materialripple.MaterialRippleLayout;
 
 
@@ -26,7 +23,7 @@ public class Registrationform extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registrationform);
-        vibrator=(Vibrator)getSystemService(VIBRATOR_SERVICE);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         e1 = (EditText) findViewById(R.id.ed3);
         e2 = (EditText) findViewById(R.id.ed4);
         e3 = (EditText) findViewById(R.id.ed5);
@@ -39,15 +36,13 @@ public class Registrationform extends AppCompatActivity {
         s1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if ((i==1)||i==0)
-                {
+                if ((i == 1) || i == 0) {
 
                     s2.setEnabled(false);
                     s2.setClickable(false);
                     s2.setDropDownVerticalOffset(20);
                     s2.setVisibility(View.GONE);
-                }
-                else {
+                } else {
                     s2.setEnabled(true);
                     s2.setClickable(true);
                     s2.setDropDownVerticalOffset(20);
@@ -76,7 +71,7 @@ public class Registrationform extends AppCompatActivity {
         initialize();
 
         if (!validate()) {
-           // Toast.makeText(this, "Signup has Failed", Toast.LENGTH_SHORT).show();
+            // Toast.makeText(this, "Signup has Failed", Toast.LENGTH_SHORT).show();
         } else {
             onSignupSuccess();
         }
@@ -116,7 +111,7 @@ public class Registrationform extends AppCompatActivity {
             Toast.makeText(this, "please select Department", Toast.LENGTH_SHORT).show();
             valid = Boolean.parseBoolean("false");
         }
-        if (s1.getSelectedItem().equals("B TECH")&& s2.getSelectedItem().equals("BRANCH")){
+        if (s1.getSelectedItem().equals("B TECH") && s2.getSelectedItem().equals("BRANCH")) {
             Toast.makeText(this, "please select Branch", Toast.LENGTH_SHORT).show();
             valid = Boolean.parseBoolean("false");
             vibrator.vibrate(300);
