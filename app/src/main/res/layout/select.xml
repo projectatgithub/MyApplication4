@@ -44,7 +44,7 @@
         android:layout_height="match_parent"
         android:text=" Admin "
         android:layout_gravity="center"
-        android:id="@+id/btn4"
+        android:id="@+id/admin"
         app:sub_btn_duration="1000"
         app:sub_btn_ripple_color="#FF5DDDC3"
         app:sub_btn_tick_color="#fff"/>
