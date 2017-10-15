@@ -1,15 +1,18 @@
 package com.example.myapplication4;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 import com.balysv.materialripple.MaterialRippleLayout;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class Registrationform extends AppCompatActivity {
@@ -18,11 +21,14 @@ public class Registrationform extends AppCompatActivity {
     private MaterialRippleLayout b1;
     private Spinner s1, s2;
     private Vibrator vibrator;
-
+FirebaseDatabase firebaseDatabase;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registrationform);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+        ;
         vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         e1 = (EditText) findViewById(R.id.ed3);
         e2 = (EditText) findViewById(R.id.ed4);
