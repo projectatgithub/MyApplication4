@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<com.spark.submitbutton.SubmitButton
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="  HOD  "
+    android:layout_gravity="center"
+    app:sub_btn_duration="1000"
+    app:sub_btn_ripple_color="#FF5DDDC3"
+    app:sub_btn_tick_color="#000"
+    android:id="@+id/btn1"/>
+
+    <com.spark.submitbutton.SubmitButton
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Student"
+        android:layout_gravity="center"
+        android:id="@+id/btn2"
+        app:sub_btn_duration="1000"
+        app:sub_btn_ripple_color="#FF5DDDC3"
+        app:sub_btn_tick_color="#fff"/>
+
+
+    <com.spark.submitbutton.SubmitButton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Faculty"
+        android:layout_gravity="center"
+        android:id="@+id/btn3"
+        app:sub_btn_duration="1000"
+        app:sub_btn_ripple_color="#FF5DDDC3"
+        app:sub_btn_tick_color="#000"/>
+
+    <com.spark.submitbutton.SubmitButton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=" Admin "
+        android:layout_gravity="center"
+        android:id="@+id/btn4"
+        app:sub_btn_duration="1000"
+        app:sub_btn_ripple_color="#FF5DDDC3"
+        app:sub_btn_tick_color="#fff"/>
+
+
+</LinearLayout>
